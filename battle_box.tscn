@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cxoobj2tdo27" path="res://player.tscn" id="1_dcxwt"]
 [ext_resource type="Texture2D" uid="uid://b4m2crlh44ogl" path="res://carousel_8_directions_transp.png" id="2_n30ws"]
+[ext_resource type="PackedScene" uid="uid://domrx1wiwmuwt" path="res://enemy_big_top.tscn" id="3_vg4f4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n30ws"]
 size = Vector2(4, 343.75)
@@ -88,3 +89,7 @@ offset_top = -168.11053
 offset_right = 2.0
 offset_bottom = 167.99951
 color = Color(0.30287153, 0.6397271, 0, 1)
+
+[node name="enemy_big_top" parent="." unique_id=1473258024 instance=ExtResource("3_vg4f4")]
+position = Vector2(680, 96)
+gravity_scale = 0.0

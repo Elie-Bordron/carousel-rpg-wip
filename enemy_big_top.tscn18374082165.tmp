@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://domrx1wiwmuwt"]
+
+[ext_resource type="Script" uid="uid://bj0g1kkfkc41w" path="res://enemy_big_top.gd" id="1_5no54"]
+[ext_resource type="Texture2D" uid="uid://nvxnqxyr4a1r" path="res://enemy_top_spritesheet_transparent.png" id="1_moish"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5no54"]
+atlas = ExtResource("1_moish")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwxmn"]
+atlas = ExtResource("1_moish")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xsf8i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5no54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwxmn")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 5.0
+}]
+
+[node name="enemy_big_top" type="RigidBody2D" unique_id=1473258024]
+script = ExtResource("1_5no54")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1874122750]
+sprite_frames = SubResource("SpriteFrames_xsf8i")
+animation = &"spin"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1109207566]
+polygon = PackedVector2Array(-5, -24, -5, -23, -6, -23, -6, -18, -22, -18, -22, -17, -23, -17, -23, -16, -24, -16, -24, 2, -23, 2, -23, 3, -22, 3, -22, 4, -20, 4, -20, 5, -19, 5, -19, 6, -17, 6, -17, 7, -16, 7, -16, 8, -14, 8, -14, 9, -13, 9, -13, 10, -11, 10, -11, 11, -10, 11, -10, 12, -8, 12, -8, 13, -7, 13, -7, 16, -6, 16, -6, 19, -5, 19, -5, 21, -4, 21, -4, 23, -3, 23, -3, 24, 3, 24, 3, 23, 4, 23, 4, 21, 5, 21, 5, 19, 6, 19, 6, 16, 7, 16, 7, 13, 8, 13, 8, 12, 10, 12, 10, 11, 11, 11, 11, 10, 13, 10, 13, 9, 14, 9, 14, 8, 16, 8, 16, 7, 17, 7, 17, 6, 19, 6, 19, 5, 20, 5, 20, 4, 22, 4, 22, 3, 23, 3, 23, 2, 24, 2, 24, -16, 23, -16, 23, -17, 22, -17, 22, -18, 6, -18, 6, -23, 5, -23, 5, -24)
