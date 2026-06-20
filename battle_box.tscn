@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://b5husudknbxn"]
+
+[ext_resource type="PackedScene" uid="uid://cxoobj2tdo27" path="res://player.tscn" id="1_dcxwt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybtpi"]
+size = Vector2(4, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcxwt"]
+size = Vector2(4, 336)
+
+[node name="battle_box" type="StaticBody2D" unique_id=2087829560]
+
+[node name="player" parent="." unique_id=1366251160 instance=ExtResource("1_dcxwt")]
+position = Vector2(584, 352)
+scale = Vector2(2, 2)
+
+[node name="wall_left" type="CollisionShape2D" parent="." unique_id=1614686923]
+position = Vector2(380, 288)
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_ybtpi")
+debug_color = Color(0.1001076, 0.6485884, 3.85046e-07, 0.41960785)
+
+[node name="ColorRect" type="ColorRect" parent="wall_left" unique_id=2020360953]
+offset_left = -2.0
+offset_top = -96.0
+offset_right = 2.0
+offset_bottom = 96.0
+color = Color(0.30287153, 0.6397271, 0, 1)
+
+[node name="wall_right" type="CollisionShape2D" parent="." unique_id=225072173]
+position = Vector2(708, 288)
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_ybtpi")
+debug_color = Color(0.1001076, 0.6485884, 3.85046e-07, 0.41960785)
+
+[node name="ColorRect" type="ColorRect" parent="wall_right" unique_id=1750956657]
+offset_left = -2.0
+offset_top = -96.0
+offset_right = 2.0
+offset_bottom = 96.0
+color = Color(0.30287153, 0.6397271, 0, 1)
+
+[node name="wall_top" type="CollisionShape2D" parent="." unique_id=178320057]
+position = Vector2(544, 188)
+rotation = 1.5707964
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_dcxwt")
+debug_color = Color(0.1001076, 0.6485884, 3.85046e-07, 0.41960785)
+
+[node name="ColorRect" type="ColorRect" parent="wall_top" unique_id=278725189]
+offset_left = -2.0
+offset_top = -168.11053
+offset_right = 2.0
+offset_bottom = 167.99951
+color = Color(0.30287153, 0.6397271, 0, 1)
+
+[node name="wall_bottom" type="CollisionShape2D" parent="." unique_id=118950507]
+position = Vector2(544, 388)
+rotation = 1.5707964
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_dcxwt")
+debug_color = Color(0.1001076, 0.6485884, 3.85046e-07, 0.41960785)
+
+[node name="ColorRect" type="ColorRect" parent="wall_bottom" unique_id=400085277]
+offset_left = -2.0
+offset_top = -168.11053
+offset_right = 2.0
+offset_bottom = 167.99951
+color = Color(0.30287153, 0.6397271, 0, 1)
